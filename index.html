@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RifalModzYT - Bussid</title>
+    <meta name="description" content="Official Support RifalModzYT - Bus Simulator Indonesia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+                        url('https://picsum.photos/1920/1080?random=45') center/cover no-repeat fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.97);
+            max-width: 460px;
+            width: 100%;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            text-align: center;
+            padding: 40px 20px 35px;
+        }
+
+        /* Lingkaran Full RGB */
+        .rainbow-circle {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff, #ff0000);
+            background-size: 300% 300%;
+            animation: rainbow-circle 4s linear infinite;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+            position: relative;
+        }
+
+        /* Border putih tipis di luar untuk kontras */
+        .rainbow-circle::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            border-radius: 50%;
+            background: white;
+            z-index: -1;
+        }
+
+        @keyframes rainbow-circle {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .rainbow-text {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: rainbow 4s linear infinite;
+            margin-bottom: 8px;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .rainbow-separator {
+            margin: 35px 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+            background-size: 400% 400%;
+            animation: rainbow-line 6s linear infinite;
+            border-radius: 50px;
+        }
+
+        @keyframes rainbow-line {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 17px 20px;
+            margin: 13px 0;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            width: 100%;
+            color: white;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+        }
+
+        .wa-admin { background: #25D366; }
+        .wa-group { background: #22C35E; }
+        .donasi-btn { 
+            background: linear-gradient(135deg, #FF6B6B, #FF4757);
+        }
+        .yt-btn { background: #FF0000; }
+        .tiktok-btn { 
+            background: #000000; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Lingkaran Full RGB -->
+            <div class="rainbow-circle"></div>
+            
+            <h1 class="rainbow-text">Halo! Selamat Datang</h1>
+            <p>Silakan pilih menu yang Anda butuhkan</p>
+        </div>
+
+        <div class="content">
+            <a href="https://wa.me/6287719930242?text=Halo%20Admin,%20saya%20mau%20bertanya" 
+               target="_blank" class="btn wa-admin">
+                <i class="fab fa-whatsapp icon"></i>
+                Hubungi Admin WhatsApp
+            </a>
+
+            <a href="https://chat.whatsapp.com/F4SitLgG0jm6cl5sUfgP8e" 
+               target="_blank" class="btn wa-group">
+                <i class="fab fa-whatsapp icon"></i>
+                Gabung Grup WhatsApp
+            </a>
+
+            <a href="https://saweria.co/RifalModzYT" 
+               target="_blank" class="btn donasi-btn">
+                <i class="fas fa-heart icon"></i>
+                Dukung Kami / Donasi
+            </a>
+
+            <div class="rainbow-separator"></div>
+
+            <a href="https://youtube.com/@rifalmodzyt?si=uLca1wQpHMNjWifa" 
+               target="_blank" class="btn yt-btn">
+                <i class="fab fa-youtube icon"></i>
+                Subscribe Channel YouTube
+            </a>
+
+            <a href="https://www.tiktok.com/@rifalmodzyt" 
+               target="_blank" class="btn tiktok-btn">
+                <i class="fab fa-tiktok icon"></i>
+                Follow TikTok
+            </a>
+
+            <p style="text-align: center; margin-top: 35px; color: #555; font-size: 14.5px;">
+                Terima kasih telah mendukung kami ❤️
+            </p>
+        </div>
+    </div>
+</body>
+</html>
